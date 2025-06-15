@@ -31,6 +31,3 @@ def analyze():
 
     text = result.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "⚠️ Sin respuesta")
     return jsonify({"response": text})
-
-if __name__ == "__main__":
-    app.run(debug=True)
