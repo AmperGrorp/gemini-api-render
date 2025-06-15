@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 API_KEY = os.getenv("GEMINI_API_KEY")
 
-@app.route("/api/analyze", methods=["POST"])
+@app.route("/analyze", methods=["POST"])
 def analyze():
     data = request.get_json()
     prompt = data.get("prompt", "")

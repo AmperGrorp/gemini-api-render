@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gemini-api
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn analyze:app
+    envVars:
+      - key: GEMINI_API_KEY
+        value: AIzaSyBASRkSRcD_nRRY3-boWI4ezsqsmNWj8Yc
